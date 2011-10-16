@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Linear Cellular Automata</TITLE>
+<META NAME="description" CONTENT="Linear Cellular Automata">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="htmlatex.css">
+</HEAD>
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+ <H1><BR CLEAR=ALL><CENTER></h1>
+ <TABLE BGCOLOR=#0060F0><TR><TD><B><FONT SIZE=5 COLOR=#C0FFFF>&nbsp;<A NAME="SECTION0001000000000000000000">Linear Cellular Automata</A></FONT>&nbsp;</B></TABLE></CENTER>
+<P>
+A biologist is experimenting with DNA modification of
+bacterial colonies being grown in a linear array of culture dishes. By
+changing the DNA, he is able ``program&quot; the bacteria to respond to the
+population density of the neighboring dishes. Population is measured
+on a four point scale (from 0 to 3). The DNA information is
+represented as an array <EM>DNA</EM>, indexed from 0 to 9, of population density
+values and is interpreted as follows:
+<P>
+<UL><LI>   In any given culture dish, let <I>K</I> be the sum of that culture dish's
+   density and the densities of the dish immediately to the left and
+   the dish immediately to the right. Then, by the next day, that dish
+   will have a population density of <EM>DNA[K]</EM>.<LI>   The dish at the far left of the line is considered to have a left
+   neighbor with population density 0.<LI>   The dish at the far right of the line is considered to have a right
+   neighbor with population density 0.
+<P>
+</UL>
+<P>
+Now, clearly, some DNA programs cause all the bacteria to die off
+(e.g., [0,0,0,0,0,0,0,0,0,0]). Others result in immediate population
+explosions (e.g., [3,3,3,3,3,3,3,3,3,3]).  The biologist is interested
+in how some of the less obvious intermediate DNA programs might
+behave.
+<P>
+<P>
+Write a program to simulate the culture growth in a line of 40 dishes,
+assuming that dish 20 starts with a population density of 1 and all
+other dishes start with a population density of 0.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">Input</A></FONT></H2>
+<P>
+The input begins with a single positive integer on a line by itself
+indicating the number of the cases following, each of them as described below.
+This line is followed by a blank line, and there is also a blank line between
+two consecutive inputs.
+<P>
+For each input set your program will read in the DNA program (10 integer values) on one line.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">Output</A></FONT></H2>
+<p>For each test case, the output must follow the description below. The outputs
+of two consecutive cases will be separated by a blank line.</p>
+<P>
+For each input set it should print the densities of the 40 dishes for each of the next 50
+days. Each day's printout should occupy one line of 40 characters.
+Each dish is represented by a single character on that line. Zero population
+densities are to be printed as the character ` '. Population density 1
+will be printed as the character `<TT>.</TT>'. Population density 2 will be
+printed as the character `<TT>x</TT>'. Population density 3 will be printed as
+the character `<TT>W</TT>'.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">Sample Input</A></FONT></H2>
+<P>
+<PRE>1
+
+0 1 2 0 1 3 3 2 3 0</PRE>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001004000000000000000">Sample Output</A></FONT></H2>
+<P>
+<PRE>bbbbbbbbbbbbbbbbbbb.bbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbb...bbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbb.xbx.bbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbb.bb.bb.bbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb.........bbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbb.xbbbbbbbx.bbbbbbbbbbbbbbb
+bbbbbbbbbbbbb.bbxbbbbbxbb.bbbbbbbbbbbbbb
+bbbbbbbbbbbb...xxxbbbxxx...bbbbbbbbbbbbb
+bbbbbbbbbbb.xb.WW.xbx.WW.bx.bbbbbbbbbbbb
+bbbbbbbbbb.bbb.xxWb.bWxx.bbb.bbbbbbbbbbb</PRE>
+<PRE>&nbsp;</PRE>
+<P>
+<B>Note:</B> Whe show only the first ten lines of output (the total number of lines must be 50) and the spaces have been replaced with the character <TT>&quot;b&quot;</TT> for ease of reading.
+The actual output file will use the ASCII-space character, not <TT>&quot;b&quot;</TT>.
+<P>
+</BODY>
+</HTML>

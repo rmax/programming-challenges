@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>The 3n + 1 problem</TITLE>
+<META NAME="description" CONTENT="The 3n + 1 problem">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="htmlatex.css">
+</HEAD>
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+ <H1><BR CLEAR=ALL><CENTER><TABLE BGCOLOR=#0060F0><TR><TD><B><FONT SIZE=5 COLOR=#C0FFFF>&nbsp;<A NAME="SECTION0001000000000000000000">The 3<I>n</I> + 1 problem</A></FONT>&nbsp;</B></TABLE></CENTER></H1>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">Background</A></FONT></H2>
+<P>
+Problems in Computer Science are often classified as belonging to a
+certain class of problems (e.g., NP, Unsolvable, Recursive).  In this
+problem you will be analyzing a property of an algorithm whose
+classification is not known for all possible inputs.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">The Problem</A></FONT></H2>
+<P>
+Consider the following algorithm:
+<PRE><TT> 
+		1. 		 input <I>n</I>
+<P>
+		2. 		 print <I>n</I>
+<P>
+		3. 		 if <I>n</I> = 1 then STOP
+<P>
+		4. 		 		 if <I>n</I> is odd then  <IMG WIDTH=95 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline44" SRC="100img1.gif"  > 
+<P>
+		5. 		 		 else  <IMG WIDTH=74 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline46" SRC="100img2.gif"  > 
+<P>
+		6. 		 GOTO 2
+<P>
+</TT></PRE>
+<P>
+Given the input 22, the following sequence of numbers will be printed
+22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+<P>
+It is conjectured that the algorithm above will terminate (when a 1 is
+printed) for any integral
+input value.  Despite the simplicity of the algorithm,
+it is unknown whether this conjecture is true.  It has been verified,
+however, for all integers <I>n</I> such that 0 &lt; <I>n</I> &lt; 1,000,000 (and, in fact,
+for many more numbers than this.)
+<P>
+Given an input <I>n</I>, it is possible to determine
+the number of numbers printed (including
+ the 1).  For a given <I>n</I> this is
+called the <EM>cycle-length</EM> of <I>n</I>.  In the example above, the cycle
+length of 22 is 16.
+<P>
+For any two numbers <I>i</I> and <I>j</I> you are to determine the maximum cycle
+length over all numbers between <U> <I>i</I> and
+<I>j</I>.
+<P>
+</U></U><H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">The Input</A></FONT></H2>
+<P>
+The input will consist of a series of pairs of integers <I>i</I> and <I>j</I>, one pair of
+integers per line.  All integers will be less than 1,000,000 and greater
+than 0.
+<P>
+You should process all pairs of integers and for each
+pair determine the maximum cycle length over all integers between and
+including <I>i</I> and <I>j</I>.
+<p>You can assume that no operation overflows a 32-bit integer.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001004000000000000000">The Output</A></FONT></H2>
+<P>
+For each pair of input integers <I>i</I> and <I>j</I> you should output <I>i</I>, <I>j</I>,
+and the maximum cycle length for integers between and including
+<I>i</I> and <I>j</I>.  These three numbers
+should be separated by at least one space with all three numbers on one
+line and with one line of output for each line of input.  The integers
+<I>i</I> and <I>j</I> must appear in the output in the same order in which they
+appeared in the input and should be
+followed by the maximum cycle length (on the same line).
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001005000000000000000">Sample Input</A></FONT></H2>
+<P>
+<PRE>
+1 10
+100 200
+201 210
+900 1000
+</PRE>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001006000000000000000">Sample Output</A></FONT></H2>
+<P>
+<PRE>
+1 10 20
+100 200 125
+201 210 89
+900 1000 174
+</PRE>
+<P>
+</BODY>
+</HTML>

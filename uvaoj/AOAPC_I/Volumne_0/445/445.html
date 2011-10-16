@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Marvelous Mazes</TITLE>
+<META NAME="description" CONTENT="Marvelous Mazes">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="htmlatex.css">
+</HEAD>
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+ <H1><BR CLEAR=ALL><CENTER><TABLE BGCOLOR=#0060F0><TR><TD><B><FONT SIZE=5 COLOR=#C0FFFF>&nbsp;<A NAME="SECTION0001000000000000000000">Marvelous Mazes</A></FONT>&nbsp;</B></TABLE></CENTER></H1>
+<P>
+Your mission, if you decide to accept it, is to create a maze
+drawing program.  A maze will consist of the alphabetic
+characters <TT>A-Z</TT>, <TT>*</TT> (asterisk), and spaces.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">Input and Output</A></FONT></H2>
+<P>
+Your program will get
+the information for the mazes from the input file.  This file
+will contain lines of characters which your program must
+interpret to draw a maze.  Each row of the maze will be described
+by a series of numbers and characters, where the numbers before a
+character tell how many times that character will be used.  If
+there are multiple digits in a number before a character, then
+the number of times to repeat the character is the sum of the
+digits before that character.
+<P>
+The lowercase letter &quot;<TT>b</TT>&quot; will be
+used in the input file to represent spaces in the maze.  The
+descriptions for different rows in the maze will be separated by
+an exclamation point (<TT>!</TT>) or by an end of line.
+<P>
+<P>
+Descriptions for
+different mazes will be separated by a blank line in both input and output.  The input
+file will be terminated by an end of file.
+<P>
+There is no limit to
+the number of rows in a maze or the number of mazes in a file,
+though no row will contain more than 132 characters.
+<P>
+Happy mazing!
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">Sample Input</A></FONT></H2>
+<P>
+<PRE>1T1b5T!1T2b1T1b2T!1T1b1T2b2T!1T3b1T1b1T!3T3b1T!1T3b1T1b1T!5T1*1T
+ 
+11X21b1X
+4X1b1X</PRE>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">Sample Output</A></FONT></H2>
+<P>
+<PRE>T TTTTT
+T  T TT
+T T  TT
+T   T T
+TTT   T
+T   T T
+TTTTT*T
+ 
+XX   X
+XXXX X</PRE>
+<P>
+</BODY>
+</HTML>

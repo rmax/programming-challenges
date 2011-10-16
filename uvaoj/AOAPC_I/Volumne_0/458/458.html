@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>The Decoder</TITLE>
+<META NAME="description" CONTENT="The Decoder">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="htmlatex.css">
+</HEAD>
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+ <H1><BR CLEAR=ALL><CENTER><TABLE BGCOLOR=#0060F0><TR><TD><B><FONT SIZE=5 COLOR=#C0FFFF>&nbsp;<A NAME="SECTION0001000000000000000000">The Decoder</A></FONT>&nbsp;</B></TABLE></CENTER></H1>
+<P>
+Write a complete program that will correctly decode a set of
+characters into a valid message. Your program should
+read a given file of a simple coded set of characters and print the 
+exact message that the characters contain. The code key for this 
+simple coding is a one for one character substitution based upon a
+<EM>single arithmetic manipulation</EM> of the printable portion of the 
+ASCII character set.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">Input and Output</A></FONT></H2>
+<P>
+For example: with the input file that contains:
+<P>
+<PRE>1JKJ'pz'{ol'{yhklthyr'vm'{ol'Jvu{yvs'Kh{h'Jvywvyh{pvu5
+1PIT'pz'h'{yhklthyr'vm'{ol'Pu{lyuh{pvuhs'I|zpulzz'Thjopul'Jvywvyh{pvu5
+1KLJ'pz'{ol'{yhklthyr'vm'{ol'Kpnp{hs'Lx|pwtlu{'Jvywvyh{pvu5</PRE>
+<P>
+your program should print the message:
+<PRE>*CDC is the trademark of the Control Data Corporation.
+*IBM is a trademark of the International Business Machine Corporation.
+*DEC is the trademark of the Digital Equipment Corporation.</PRE>
+<P>
+Your program should accept all sets of characters that use the same
+encoding scheme and should print the actual message of each set of
+characters.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">Sample Input</A></FONT></H2>
+<P>
+<PRE>1JKJ'pz'{ol'{yhklthyr'vm'{ol'Jvu{yvs'Kh{h'Jvywvyh{pvu5
+1PIT'pz'h'{yhklthyr'vm'{ol'Pu{lyuh{pvuhs'I|zpulzz'Thjopul'Jvywvyh{pvu5
+1KLJ'pz'{ol'{yhklthyr'vm'{ol'Kpnp{hs'Lx|pwtlu{'Jvywvyh{pvu5</PRE>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">Sample Output</A></FONT></H2>
+<P>
+<PRE>*CDC is the trademark of the Control Data Corporation.
+*IBM is a trademark of the International Business Machine Corporation.
+*DEC is the trademark of the Digital Equipment Corporation.</PRE>
+<P>
+</BODY>
+</HTML>
